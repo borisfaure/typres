@@ -14,6 +14,7 @@ r() {
 PWD=`pwd`
 
 t() {
+    echo -ne '\033[0;97m'
     local str=$@
     local len=$COLUMNS
     local line=""
@@ -36,6 +37,7 @@ t() {
         WL=$(( $WL + 1 ))
         echo "$l"
     done
+    echo -ne '\033[0m'
 }
 
 function b {
@@ -103,6 +105,7 @@ vc() {
 }
 
 c() {
+    echo -ne '\033[0;97m'
     local str=$@
     local lines=()
     local len=$COLUMNS
@@ -132,6 +135,7 @@ c() {
     for l in "${lines[@]}"; do
         vc $l
     done
+    echo -ne '\033[0m'
 }
 
 f() {
@@ -141,7 +145,9 @@ f() {
         echo ""
         WL=$(( $WL + 1 ))
     done
+    echo -ne '\033[104;90m'
     echo $@
+    echo -ne '\033[0m'
 }
 
 function s01 {
