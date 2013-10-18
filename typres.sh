@@ -8,7 +8,7 @@ r() {
     COLUMNS=${s/;*}
     LINES=${s#*;}
     LINES=${LINES/;*}
-    WL=1
+    WL=0
 }
 
 PWD=`pwd`
@@ -161,8 +161,8 @@ f() {
         WL=$(( $WL + 1 ))
     done
     echo -ne '\033[104;90m'
-    echo $@
-    echo -ne '\033[0m'
+    echo -n $@
+    echo -ne '\033[0m '
 }
 
 function s_intro {
