@@ -1,0 +1,8 @@
+typres is a presentation tool for my talk on terminology at the efl dev day
+2013.
+
+It's written in bash and runs on terminology. It uses terminology escape codes
+to inline images into the terminal. Learn more about them from terminology's
+README.
+
+The code is under the WTF Public License. I do not own the gif files used.
