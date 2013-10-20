@@ -265,7 +265,7 @@ function s_can_do_it {
     i "s" "you_can_do_it.gif"
 }
 function s_troll {
-    t "Apps!"
+    t "Terminology is an OS, like emacs, except better"
     local bullets=( "Elementary is not for you?" \
        "Write your apps for Terminology!"
        "Most languages supported!")
