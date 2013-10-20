@@ -240,6 +240,7 @@ function s_figures {
     t "Figures"
     local bullets=( "Currently on version 0.3" \
     "a bit less than 20k LOC" \
+    "737 commits to date" \
     "about 35 contributors" \
     "23 defects on Coverity" \
     "26 Bugs on Phab" \
