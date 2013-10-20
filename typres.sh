@@ -264,6 +264,11 @@ function s_can_do_it {
     t "You can do it!"
     i "s" "you_can_do_it.gif"
 }
+function s_release {
+    c "Next release at the end of the year, after efl 1.8"
+
+    i "c" "terminology.png"
+}
 function s_troll {
     t "Terminology is an OS, like emacs, except better"
     local bullets=( "Elementary is not for you?" \
@@ -277,7 +282,9 @@ function s_end {
 }
 
 
-slides=(s_intro s_me s_about s_interlude0 s_features1 s_interlude1 s_features2 s_interlude2 s_features3 s_figures s_help s_can_do_it s_troll s_end)
+slides=(s_intro s_me s_about s_interlude0 s_features1 s_interlude1 \
+s_features2 s_interlude2 s_features3 s_figures s_help s_can_do_it s_release \
+s_troll s_end)
 
 
 
