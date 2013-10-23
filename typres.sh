@@ -96,7 +96,6 @@ function b {
 
 i() {
     local h=$(( $LINES - $WL - 1 ))
-    #tycat -c -g ${COLUMNS}x${h} you_can_do_it.gif
     echo -ne '\033}i'$1'#'$COLUMNS';'$h';'$PWD'/'$2'\0'
     for I in $(seq 1 $h); do
        echo -ne '\033}ib\0'
