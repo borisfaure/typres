@@ -5,4 +5,6 @@ It's written in bash and runs on terminology. It uses terminology escape codes
 to inline images into the terminal. Learn more about them from terminology's
 README.
 
+To view it, run typres.sh in its directory in terminology and enjoy :)
+
 The code is under the WTF Public License. I do not own the gif files used.
