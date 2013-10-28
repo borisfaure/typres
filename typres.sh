@@ -164,6 +164,9 @@ f() {
     echo -ne '\033[0m '
 }
 
+
+# START OF EDITABLE PART
+
 function s_intro {
     c "Terminology - Oct 2013 - Where are we?"
 
@@ -286,6 +289,7 @@ s_features2 s_interlude2 s_features3 s_figures s_help s_can_do_it s_release \
 s_troll s_end)
 
 
+# END OF EDITABLE PART
 
 S=0
 while true; do

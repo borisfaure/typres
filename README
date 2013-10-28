@@ -6,5 +6,21 @@ to inline images into the terminal. Learn more about them from terminology's
 README.
 
 To view it, run typres.sh in its directory in terminology and enjoy :)
+On each slide, you have to enter one of the following commands:
+- r: refresh the current slide in case you resized the terminal
+- q: to quit
+- p: go to the previous slide
+- q: go to the next slide
+- a number: the slide you want to go to.
+
+Each slide is a function. There are few functions used to make a slide:
+- t: to show a title on the slide
+- c: show a text in the middle of the slide
+- i: insert an image: the first argument is either to stretch (s) or center
+  the image (c).
+- b: the arguments are strings to display as bullet list.
+
+I'd happily accept any contribution to make this piece of code better (like
+adding a command to change the background for example).
 
 The code is under the WTF Public License. I do not own the gif files used.
