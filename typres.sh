@@ -243,7 +243,7 @@ function s_figures {
     "about 35 contributors" \
     "23 defects on Coverity" \
     "26 Bugs on Phab" \
-    "11 Tasks as whishlist")
+    "11 Tasks as wishlist")
     b "${bullets[@]}"
 }
 
