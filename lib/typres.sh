@@ -8,6 +8,33 @@ r() {
 
 PWD=`pwd`
 
+tf() {
+    echo -ne '\033[0;97m\033[20m'
+    local str=$@
+    local len=$COLUMNS
+    local line=""
+    local lines=()
+    for w in $str; do
+        local l=${#w}
+        if [[ l -lt $len ]] ; then
+            len=$(( $len - $l - 1 ))
+            line="$line $w"
+        else
+            len=$COLUMNS
+            lines+=("$line")
+            line="$w"
+        fi
+    done;
+    if [[ -n $line ]]; then
+        lines+=("$line")
+    fi
+    for l in "${lines[@]}"; do
+        WL=$(( $WL + 1 ))
+        echo "$l"
+    done
+    echo -ne '\033[0m'
+}
+
 t() {
     echo -ne '\033[0;97m'
     local str=$@
@@ -111,6 +138,40 @@ vc() {
     done
     echo $str
     WL=$(( $WL + 1 ))
+}
+
+cf() {
+    echo -ne '\033[0;97m\033[20m'
+    local str=$@
+    local lines=()
+    local len=$COLUMNS
+    local line=""
+    for w in $str; do
+        local l=${#w}
+        if [[ l -lt $len ]] ; then
+            len=$(( $len - $l - 1 ))
+            line="$line $w"
+        else
+            len=$COLUMNS
+            lines+=("$line")
+            line="$w"
+        fi
+    done;
+    if [[ -n $line ]]; then
+        lines+=("$line")
+    fi
+
+    local l=$(( ($LINES - ${#lines[@]}) / 2 ))
+    for I in $(seq 1 $l); do
+        echo ""
+        WL=$(( $WL + 1 ))
+    done
+
+
+    for l in "${lines[@]}"; do
+        vc $l
+    done
+    echo -ne '\033[0m'
 }
 
 c() {
