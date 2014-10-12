@@ -16,7 +16,7 @@ function s_me {
 
     local bullets=("Boris Faure aka billiob" \
         "developer on Enlightement and the EFL for more than 5 years" \
-        "working on Terminology for more than 2 years"
+        "working on Terminology for quite some time"
     )
     b "${bullets[@]}"
 }
@@ -155,14 +155,14 @@ function s_end {
 }
 
 function s_eat {
-    tf "Let's go eat!"
+    tf "Let's go eat!!"
 
     i "c" "food.gif"
 }
 
 
-slides=(s_intro s_me s_about s_whwd0 s_whwd1 s_whwd2 s_whwd3 s_whwd4 s_whwd5 \
-    s_distro0 s_distro1 s_next0 s_next1 s_gravatar s_end s_eat )
+slides=( s_intro s_me s_about s_whwd0 s_whwd1 s_whwd2 s_whwd3 s_whwd4 s_whwd5 \
+    s_distro0 s_distro1 s_next0 s_next1 s_gravatar s_end )
 
 
 typres "${slides[@]}"
